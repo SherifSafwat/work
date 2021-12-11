@@ -8,7 +8,6 @@ export class ApiService {
 
   constructor(private http:HttpClient) { }
 
-
   public covid19Reports(){
   return  this.http.get("https://corona.lmao.ninja/v2/countries");
   }

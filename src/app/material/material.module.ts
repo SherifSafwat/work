@@ -1,12 +1,16 @@
 import { NgModule } from '@angular/core';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatExpansionModule} from '@angular/material/expansion';
-import {MatIconModule} from '@angular/material/icon';
-import {MatListModule} from '@angular/material/list';
-//  import { MatTableDataSource } from '@angular/material/table';
-//  import { MatPaginator } from '@angular/material/paginator';
-//  import { MatSort } from '@angular/material/sort';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
+//import { MatTableExporterModule } from 'mat-table-exporter';
 
 const materialComp = [
   MatToolbarModule,
@@ -14,15 +18,17 @@ const materialComp = [
   MatExpansionModule,
   MatIconModule,
   MatListModule,
-  
-  // MatTableDataSource,
-  // MatPaginator,
-  // MatSort ,
+  MatTableModule,
+  MatPaginatorModule,
+  MatSortModule,
+  MatInputModule,
+  MatFormFieldModule,
+  MatButtonModule,
 ];
 
 @NgModule({
   declarations: [],
   imports: [materialComp],
-  exports: [materialComp]
+  exports: [materialComp],
 })
-export class MaterialModule { }
+export class MaterialModule {}

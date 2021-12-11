@@ -48,14 +48,14 @@
       </button> -->
       <!-- <app-home></app-home> --> 
       <!-- {{home}} -->
-  
+
      <!-- <app-tete>
       <h2>hidaa</h2>
        <h1>saa</h1>
        <p>hi</p>
       </app-tete> -->
       <router-outlet></router-outlet>
-  
+
     </div>
   
   </mat-drawer-container>
