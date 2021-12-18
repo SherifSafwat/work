@@ -1,8 +1,8 @@
+
 <mat-toolbar>
     <button mat-icon-button class="icon" >
       <mat-icon>menu</mat-icon>
-    </button>
-    <span class="example-spacer"></span>
+    </button>    
     <span>QStar</span>
     <span class="example-spacer"></span>
     <button mat-icon-button class="favorite-icon" >
@@ -43,20 +43,35 @@
     </mat-drawer>
   
     <div class="example-sidenav-content">
-      <!-- <button type="button" mat-button>
-        Toggle sidenav
-      </button> -->
-      <!-- <app-home></app-home> --> 
-      <!-- {{home}} -->
-  
-     <!-- <app-tete>
-      <h2>hidaa</h2>
-       <h1>saa</h1>
-       <p>hi</p>
-      </app-tete> -->
-      <router-outlet></router-outlet>
-  
+      <router-outlet></router-outlet>  
     </div>
   
   </mat-drawer-container>
-  
+
+  <footer id="dk-footer" class="dk-footer">
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <span>Copyright © 2019, All Right Reserved QStar</span>
+                </div>
+                <!-- End Col -->
+                <div class="col-md-6">
+                    <div class="copyright-menu">
+                        <ul>
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <a href="#">About</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- End col -->
+            </div>
+            <!-- End Row -->
+        </div>
+        <!-- End Copyright Container -->
+    </div>
+</footer>

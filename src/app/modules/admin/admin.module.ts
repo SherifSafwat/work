@@ -13,9 +13,10 @@ import { MaterialModule } from '../../material/material.module';
 
 import { AdminRoutingModule } from './admin-routing.module';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
- import { HeaderComponent } from './components/header/header.component';
+ //import { HeaderComponent } from './components/header/header.component';
 // import { FooterComponent } from './components/footer/footer.component';
  import { HomeComponent } from './components/home/home.component';
+import { PostComponent } from './components/post/post.component';
 // import { ContactComponent } from './components/contact/contact.component';
 // import { ServicesComponent } from './components/services/services.component';
 // import { AboutComponent } from './components/about/about.component';
@@ -23,9 +24,10 @@ import { AdminDashboardComponent } from './components/admin-dashboard/admin-dash
 @NgModule({
   declarations: [
      AdminDashboardComponent,
-     HeaderComponent,
+     //HeaderComponent,
     // FooterComponent,
      HomeComponent,
+     PostComponent,
     // ContactComponent,
     // ServicesComponent,
     // AboutComponent,
