@@ -6,6 +6,7 @@ import { AboutComponent } from './components/about/about.component';
 //import { ServicesComponent } from './components/services/services.component';
 //import { ContactComponent } from './components/contact/contact.component';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
+import { PostComponent } from './components/post/post.component';
  
 const routes: Routes = [
   {

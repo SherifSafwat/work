@@ -9,12 +9,12 @@ export class ApiService {
   constructor(private http:HttpClient) { }
 
   public covid19Reports(){
-  //return  this.http.get("https://corona.lmao.ninja/v2/countries");
-  return  this.http.get("https://jsonplaceholder.typicode.com/posts");
+    return  this.http.get("https://jsonplaceholder.typicode.com/posts");
   }
   
-  public getPost(id: number){
-    return  this.http.get("https://jsonplaceholder.typicode.com/posts/{:id}");
+  public getPost(id?: number){    
+    return this.http.get(`https://jsonplaceholder.typicode.com/posts/${id}`);
+    //.subscribe(data => {   console.log(data); return data; }); 
   }
   
 }

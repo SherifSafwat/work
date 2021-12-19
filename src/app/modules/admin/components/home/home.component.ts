@@ -23,20 +23,6 @@ export class HomeComponent implements OnInit {
     'actions',
   ];
 
-  /*displayedColumns: string[] = [
-    'country',
-    'cases',
-    'todayCases',
-    'deaths',
-    'todayDeaths',
-    'recovered',
-    'active',
-    'critical',
-    'casesPerOneMillion',
-    'deathsPerOneMillion',
-    'tests',
-    'testsPerOneMillion',
-  ];*/
   dataSource = new MatTableDataSource<Posts>(this.ELEMENT_DATA);
 
   @ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
@@ -60,8 +46,6 @@ export class HomeComponent implements OnInit {
   }
 
   getRecord(id: number){
-    //document.location.href = 'http://localhost:4200/admin/post/{id}';
-    this.router.navigate(['/post', { id: id }]);
-    console.log(id);
+    this.router.navigate(['admin/post', id]);
   }
 }
