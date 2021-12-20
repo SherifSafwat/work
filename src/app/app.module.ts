@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { BrowserModule } from '@angular/platform-browser';
+//import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http'; //BrowserModule, BrowserAnimationsModule, HttpModule
 //import { HttpModule } from '@angular/common/http'; //BrowserModule, BrowserAnimationsModule, HttpModule
 
@@ -27,7 +27,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     NotFoundComponent,
   ],
   imports: [
-    BrowserModule,
+    //BrowserModule,
     CommonModule,
     
     HttpClientModule,

@@ -10,9 +10,19 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
+import { CommonModule } from '@angular/common';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
 //import { MatTableExporterModule } from 'mat-table-exporter';
 
 const materialComp = [
+  CommonModule,
+  MatNativeDateModule,
+  MatDatepickerModule,
+  MatSelectModule,
+  MatRadioModule,
   MatToolbarModule,
   MatSidenavModule,
   MatExpansionModule,

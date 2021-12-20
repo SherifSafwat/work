@@ -6,7 +6,7 @@ import { MatSort } from '@angular/material/sort';
 import { ApiService } from '../../../../services/api/api.service';
 
 import { CountryReports } from '../../../../data/countryReports';
-import { Posts } from '../../../../data/posts';
+import { IPost } from '../../../../data/posts';
 import { Router } from '@angular/router';
 
 @Component({
@@ -16,14 +16,14 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
   
-  ELEMENT_DATA: Posts[] = [];
+  ELEMENT_DATA: IPost[] = [];
   displayedColumns: string[] = [
     'userid',
     'id',
     'actions',
   ];
 
-  dataSource = new MatTableDataSource<Posts>(this.ELEMENT_DATA);
+  dataSource = new MatTableDataSource<IPost>(this.ELEMENT_DATA);
 
   @ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
   //@ViewChild(MatSort, { static: true }) sort!: MatSort;  
@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit {
 
   public getAllReports(){
      let resp = this.service.covid19Reports();
-     resp.subscribe(report=>this.dataSource.data=report  as Posts[])
+     resp.subscribe(report=>this.dataSource.data=report  as IPost[])
   }
 
   applyFilter(filterValue: string) {
