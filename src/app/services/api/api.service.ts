@@ -25,8 +25,8 @@ export class ApiService {
   public add(post: string) {
     //const body = { userId: post?.userId };
     const header = new HttpHeaders({ 'content-type': 'application/json' });
-    this.http.post<any>(this.url, post, { headers: header })
-      .subscribe(data => {  console.log(data);  return data.id; });
+    //this.http.post<any>(this.url, post, { headers: header })
+    //  .subscribe(data => {  console.log(data);  return data.id; });
     //const headers = {'Content-Type': 'application/json', 'Authorization': 'Bearer my-token', 'My-Custom-Header': 'foobar' };   
     //const body = { title: 'Angular POST Request Example' };
     //this.http.post<IPost>('https://reqres.in/api/posts', body, { headers })

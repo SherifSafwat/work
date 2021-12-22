@@ -28,12 +28,11 @@ export class PostComponent implements OnInit {
     this.service.getPost(Number(this.id)).subscribe((data) => {
       this.ELEMENT_DATA = data as IPost;
       console.log(data);
-    });  
+      
 
     this.form = this.fb.group({
       userId: [null, [Validators.required, Validators.minLength(1)]],
-      title: ["j",],
-      name: [null],
+      name: [ this.ELEMENT_DATA ? this.ELEMENT_DATA.userId.toString() : null ],
       password: [null], 
       //email: [null, [Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$'),],],
       email: [null],
@@ -43,11 +42,19 @@ export class PostComponent implements OnInit {
       address: [null],
     });
 
+
+  });
+
   }
+
+
 
   onSubmit(form: FormGroup) {
     //this.service.add(JSON.stringify(form.value)).then(() => form.reset());
-    alert( this.service.add( JSON.stringify(form.value) ) );
+    
+    //*alert( this.service.add( JSON.stringify(form.value) ) );
+    
+    //*this.form.controls['name'].setValue("aa");
 
     //alert('SUCCESS!! :-)\n\n' + JSON.stringify(form.value, null, 4));
   }
