@@ -1,15 +1,61 @@
-<div class="container"> <ng-container *ngIf="form else loading">
+<div class="container"> 
+<!-- 
+<ng-container *ngIf="form else loading">
 
-  <form [formGroup]="form"  (ngSubmit)="onSubmit(form)">
+  <div>
+    <h4>Add new book record</h4>
+    <form #bookForm="ngForm" (ngSubmit)="onSubmit(bookForm)">
+      <div class="form-group">
+         <label>Book Name</label>
+         <input class="form-control" name="name" #name="ngModel" 
+          [(ngModel)]="book.ename" placeholder="Book Name" required>
+      </div>
+  
+      <div class="form-group">
+        <label>Author</label>
+        <input class="form-control" name="author" #name="ngModel" 
+          [(ngModel)]="book.aname" placeholder="Author" required>
+      </div>
+  
+       <div class="form-group">
+         <label>Genre</label>
+         <select class="form-control" name="genre" #name=ngModel 
+           [(ngModel)]="book.genre">
+            <option value="Novel">Novel</option>
+            <option value="Non Fiction">Non Fiction</option>
+            <option value="Biography">Biography</option>
+         </select>
+        </div>
+  
+        <div class="form-group">
+          <label>Price</label>
+          <div class="input-group">
+             <div class="input-group-addon">
+                 <i class="bi bi-currency-dollar"></i>
+             </div>
+             <input class="form-control" name="price" #name="ngModel" 
+               [(ngModel)]="book.price" placeholder="Price" required>
+              </div>
+          </div>
+  
+          <div class="form-group float-right">
+             <button type="submit" class="btn btn-success" 
+               [disabled]="!bookForm.valid" [disabled]="bookForm.invalid">
+                <i class="bi bi-plus"></i>Add Book</button>
+          </div>
+      </form>
+  </div> -->
 
-    <div>
+  <!-- <form [formGroup]="form"  (ngSubmit)="onSubmit(form)">  -->
+    <form [formGroup]="form"  (ngSubmit)="onSubmit(form)"> 
+    <!-- <div>
       <mat-form-field appearance="standard">
         <mat-label>Id</mat-label>
         <input matInput maxlength="15" inputmode="tel" placeholder="Type name" formControlName="userId" #nameInput>
         <mat-hint>Mini character 10: {{ nameInput.value.length }}/10</mat-hint>
         <mat-error>Name is required</mat-error>
       </mat-form-field>
-    </div>
+    </div> -->
     <div>
       <mat-form-field appearance="standard">
         <mat-label>Name</mat-label>
@@ -33,10 +79,10 @@
     <div>
       <mat-form-field appearance="standard">
         <mat-label>Name</mat-label>
-        <input matInput maxlength="15" inputmode="tel" placeholder="Type name" formControlName="name" #nameInput>
+        <input matInput maxlength="15" inputmode="tel" placeholder="Type name" formControlName="id" #nameInput>
         <mat-hint>Mini character 10: {{ nameInput.value.length }}/10</mat-hint>
         <mat-error>Name is required</mat-error>
-        <mat-error *ngIf="(form.get('name'))?.errors?.minlength">Please enter more than 10 character</mat-error>
+        <mat-error *ngIf="(form.get('id'))?.errors?.minlength">Please enter more than 10 character</mat-error>
       </mat-form-field>
     </div>
 
@@ -95,7 +141,9 @@
   </form>
 
   <div>{{ form.value | json }}</div>
-</ng-container>
+
+
+<!-- </ng-container> -->
 </div>
 
 <ng-template #loading>
