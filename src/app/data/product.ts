@@ -1,5 +1,6 @@
-export interface IProduct {
-    id: number;
-    ename: string;
-    aname: string;
-  }
+import { IBase } from './base'
+
+export interface IProduct extends IBase {
+    uomid: number
+}
+

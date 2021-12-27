@@ -20,7 +20,7 @@ export class PostComponent implements OnInit {
   ELEMENT_DATA!: IPost;
   form!: FormGroup;
 
-  book: IProduct = {id: 0, ename: '', aname: '' };
+  //book: IProduct = {id: 0, ename: '', aname: '' };
 
   constructor(    
     private service1: ApiService,

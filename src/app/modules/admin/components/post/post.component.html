@@ -58,13 +58,14 @@
     </div> -->
     <div>
       <mat-form-field appearance="standard">
-        <mat-label>Name</mat-label>
+        <mat-label>Product Name</mat-label>
         <input matInput maxlength="15" inputmode="tel" placeholder="Type name" formControlName="name" #nameInput>
         <mat-hint>Mini character 10: {{ nameInput.value.length }}/10</mat-hint>
         <mat-error>Name is required</mat-error>
       </mat-form-field>
     </div>
-    <div>
+
+    <!-- <div>
       <mat-form-field appearance="standard">
         <mat-label>Password </mat-label>
         <input matInput [type]="flag ? 'password' : 'text'" placeholder="Enter your password" formControlName="password">
@@ -74,11 +75,11 @@
           Please enter more than 6 character
         </mat-error>
       </mat-form-field>
-    </div>
+    </div> -->
 
     <div>
       <mat-form-field appearance="standard">
-        <mat-label>Name</mat-label>
+        <mat-label>Product Type</mat-label>
         <input matInput maxlength="15" inputmode="tel" placeholder="Type name" formControlName="id" #nameInput>
         <mat-hint>Mini character 10: {{ nameInput.value.length }}/10</mat-hint>
         <mat-error>Name is required</mat-error>
@@ -86,7 +87,7 @@
       </mat-form-field>
     </div>
 
-    <div>
+    <!--<div>
       <mat-form-field appearance="legacy">
         <mat-label>Email Address:</mat-label>
         <input matInput type="email" formControlName="email" placeholder="Your email">
@@ -115,7 +116,8 @@
         </mat-select>
       </mat-form-field>
     </div>
-    <div style="margin-top:10px;">
+
+     <div style="margin-top:10px;">
       <div style="margin-right:3%; color:#6b6b6b;">
         <mat-label>Gender</mat-label>
       </div>
@@ -133,14 +135,15 @@
         </mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
-    </div>
+    </div> -->
+
     <div mat-dialog-actions align="end">
       <button mat-raised-button color="primary" type="submit" [disabled]="!form.valid">Submit</button>
     </div>
 
   </form>
 
-  <div>{{ form.value | json }}</div>
+  <!-- <div>{{ form.value | json }}</div> -->
 
 
 <!-- </ng-container> -->
